@@ -32,15 +32,6 @@ export class DashboardComponent implements OnInit {
   }
 
   algo(){
-    this.router.navigate(['studentalgo']);
-    console.log('algo');
-  }
-
-  software(){
     this.router.navigate(['studentsoftware']);
-  }
-
-  java(){
-    this.router.navigate(['studentjava']);
   }
 }

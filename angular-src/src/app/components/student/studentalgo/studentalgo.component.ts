@@ -89,7 +89,7 @@ export class StudentalgoComponent implements OnInit {
   finish(){
     localStorage.setItem('score', JSON.stringify(this.scoreArray));
     // localStorage.setItem('length', this.questions.length);
-    this.router.navigate(['studentsoftware']);
+    this.router.navigate(['userstress']);
   }
   onLogoutClick(){
     this.authService.onLogout();
