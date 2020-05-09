@@ -1,0 +1,80 @@
+<!-- <div>
+  <img
+    src="https://demo.w3layouts.com/demos_new/template_demo/07-02-2018/referral_program_form-demo_Free/1812534694/web/images/banner.jpg"
+    alt=""
+    srcset=""
+  />
+  <h2>Hey <span id="name"></span></h2>
+  <button id="logout" (click)="onLogoutClick()">Logout</button>
+  <div class="group">
+    <h4>hyyy</h4> 
+    <h1 class="text-center">Your details</h1>
+     <button (click)="algo()">Algorithm Design</button>
+    <button (click)="software()">Software Engineering</button>
+    <button (click)="java()">Java</button>
+    <button (click)="stress()">stress</button> 
+  </div>
+</div> -->
+<!-- <button id="logout" (click)="onLogoutClick()">Logout</button> -->
+<div class="tdash-form-cont">
+  <h1 class="form-heading">Psychologist Detailed Form</h1>
+  <div class="form-div">
+    <h2>Detailed Form</h2>
+    <p>Give us more information so that our users can contact you..</p>
+    <div class="form-cont">
+      <form (submit)="onSubmit()">
+        <ul>
+          <div class="form-section">
+            <h3>Your Details</h3>
+            <li>
+              <label class="option-name">Name <span class="required-star"> * </span></label>
+              <div class="option-val">
+                <input type="text" [ngModelOptions]="{standalone: true}" id="name" name="name" [(ngModel)] = 'name' placeholder="Enter your name" required />
+              </div>
+            </li>
+            <li>
+              <label class="option-name" >Email <span class="required-star"> * </span></label>
+              <div class="option-val">
+                <input type="email" [ngModelOptions]="{standalone: true}" name="email"  [(ngModel)] = 'email' placeholder="Enter your email" id="" required />
+              </div>
+            </li>
+            <li>
+              <label class="option-name">Contact Number <span class="required-star"> * </span></label>
+              <div class="option-val">
+                <input type="tel" [ngModelOptions]="{standalone: true}" name="number" [(ngModel)] = 'number' placeholder="e.g- 8213456742" id="" required />
+              </div>
+            </li>
+            <li>
+              <label class="option-name">Expertise <span class="required-star"> * </span></label>
+              <div class="option-val">
+                <input type="text" [ngModelOptions]="{standalone: true}" name="expertise" [(ngModel)] = 'expertise' id="" placeholder="e.g- Curing Depression" required />
+              </div>
+            </li>
+            <li>
+              <label class="option-name">Experience <span class="required-star"> * </span></label>
+              <div class="option-val">
+                <input type="text" [ngModelOptions]="{standalone: true}" name="experience" [(ngModel)] = 'experience' id="" placeholder="e.g- 2 years" required />
+              </div>
+            </li>
+            <li>
+              <label class="option-name">
+                Offical Address
+                <span class="required-star"> * </span></label>
+              <div class="option-val">
+                <textarea  [(ngModel)] = 'address' required name="address" placeholder="Your Office address goes here.."></textarea>
+              </div>
+            </li>
+          </div>
+        </ul>
+        <div class="submit-cont">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-1">
+      <p>Copyright © 2019 MAAD. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>

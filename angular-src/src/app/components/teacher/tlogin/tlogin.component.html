@@ -1,0 +1,58 @@
+<!-- <form (submit)="onLoginSubmit()">
+    <img src="https://p.w3layouts.com/demos_new/template_demo/14-08-2018/edulearn-demo_Free/275217196/web/images/banner2.jpg" alt="" srcset="">
+    <div class="group">
+      <h3 class="text-center">Teacher Login yourself</h3>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Username</label>
+            <input type="text" [(ngModel)]="username" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+            <span class="loginUsername"></span>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" [(ngModel)]="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <span class="loginPassword"></span>
+          </div>
+          
+          <button type="submit" value="submit" class="btn btn-primary submit">Submit</button>
+          <button (click)="onRegister()" class="btn btn-success register1">Register</button>
+    </div>
+  </form>
+  <h4>Don't have an account? Register here <button (click)="onRegister()" class="btn btn-success register2">Register</button></h4> -->
+  <div class="login">
+  <!-- <header>
+    <div class="header-1">
+      <a href="#">
+        <img src="https://neuroethicscanada.files.wordpress.com/2014/03/logo2-no-bg.png?w=300" alt="">
+        <span class="header-a">Personalysis</span>
+      </a>
+    </div>
+  </header> -->
+  <div class="login-1">
+    <h1>Sign in to your Account</h1>
+    <form (submit)="onLoginSubmit()">
+      <h3 class="text-center">Welcome Back</h3>
+      <div class="form-section">
+        <label>Username <span class="w3ls-star"> * </span></label>
+        <input type="text" [(ngModel)]="username" name="username" placeholder="Enter username" required=" ">
+        <span class="loginUsername"></span>
+      </div>
+      <div class="form-section">
+        <label>Password <span class="w3ls-star"> * </span></label>
+        <input type="password" [(ngModel)]="password" name="password" placeholder="Enter password" required=" ">
+        <span class="loginPassword"></span>
+      </div>
+      <div class="form-group">
+          <button type="submit" value="submit" class="login1">Login</button> <br>
+          <span>New User? <a (click)="onRegister()" class="register1">Register here</a></span>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <div class="footer-1">
+      <p>Copyright © 2019 MAAD. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>
+
+  
+  

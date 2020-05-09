@@ -1,0 +1,144 @@
+<div class="main-div">
+  <header>
+    <div class="header-1">
+      <a href="#">
+        <img src="https://neuroethicscanada.files.wordpress.com/2014/03/logo2-no-bg.png?w=300" alt="">
+        <span class="header-a">Personalysis</span>
+      </a>
+    </div>
+    <div class="header-2">
+      <button (click)="onLogoutClick()" class="head-btn">Logout
+      </button>
+      <!-- <button class="head-btn">Register
+          </button> -->
+    </div>
+  </header>
+  <div class="heading" id="head-bg">
+    <h2>
+      Glad You Wish To Take a Step Towards Your Happiness !! Hope this
+      Counseling Helps ..
+    </h2>
+    <h2>
+      Please Choose From Below List of All Psychologists ..
+    </h2>
+  </div>
+  <!-- {{psycho}} -->
+  <div class="row card-cont">
+    <div class="column" *ngFor="let p of psycho">
+      <div class="card">
+        <div class="img-cont">
+          <h5 class="name-design">{{p.name}}</h5>
+        </div>
+        <div class="desc">
+          <!-- {{psycho}} -->
+          <div class="content1">
+            <img src="https://icon-library.net/images/psychology-icon/psychology-icon-1.jpg" alt="" />
+          </div>
+          <div class="content2">
+            <h6>Experience : <span class="head">{{p.experience}} </span></h6>
+            <h6>Expertise : <span class="head">{{p.expertise}}</span></h6>
+            <h6>Rating : 
+              <span *ngIf="p.rating">
+                <!-- 1 star  -->
+                <i
+                  [class]="(p.rating == 0) ? 'far fa-star' : (p.rating > 0 && p.rating < 1) ? 'head fas fa-star-half-alt' : 'head fas fa-star'"></i>
+                <!-- 2 star  -->
+                <i
+                  [class]="(p.rating > 1 && p.rating < 2) ? 'fas fa-star-half-alt' : (p.rating >= 2) ? 'head fas fa-star' : 'head far fa-star'"></i>
+                <!-- 3 star  -->
+                <i
+                  [class]="(p.rating > 2 && p.rating < 3) ? 'fas fa-star-half-alt' : (p.rating >= 3) ? 'head fas fa-star' : 'head far fa-star'"></i>
+                <!-- 4 star  -->
+                <i
+                  [class]="(p.rating > 3 && p.rating < 4) ? 'fas fa-star-half-alt' : (p.rating >= 4) ? 'head fas fa-star' : 'head far fa-star'"></i>
+                <!-- 5 star  -->
+                <i
+                  [class]="(p.rating > 4 && p.rating < 5) ? 'fas fa-star-half-alt' : (p.rating >= 5) ? 'head fas fa-star' : 'head far fa-star'"></i>
+              </span>
+            </h6>
+            <button (click)="onChat()" >Proceed to Chat</button>
+          </div>
+          <!-- <h6>Address : {{p.address}}</h6> -->
+        </div>
+        <!-- <div class="contact">
+          <div><i class="fa fa-phone"></i> &nbsp;{{p.number}}</div>
+          <div><i class="fa fa-envelope"></i> &nbsp;{{p.email}}</div> 
+        </div> -->
+      </div>
+    </div>
+    <!-- <div class="column">
+      <div class="card">
+        <div class="img-cont">
+          <img src="https://icon-library.net/images/psychology-icon/psychology-icon-1.jpg" alt="" />
+        </div>
+        <div class="desc">
+          <h5 class="name-design">Dr. Shahshi Tharoor</h5>
+          <h6>Experience : 3 years</h6>
+          <h6>Expertise in: <span>Curing Depression</span></h6>
+          <h6>Address : B-39 D-Block, Defence Colony,Delhi</h6>
+        </div>
+        <div class="contact">
+          <div><i class="fa fa-phone"></i> &nbsp;123456782</div>
+          <div><i class="fa fa-envelope"></i> &nbsp;shashi@tharoor.com</div>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="column">
+      <div class="card">
+        <div class="img-cont">
+          <img src="https://icon-library.net/images/psychology-icon/psychology-icon-1.jpg" alt="" />
+        </div>
+        <div class="desc">
+          <h5 class="name-design">Dr. Shahshi Tharoor</h5>
+          <h6>Experience : 3 years</h6>
+          <h6>Expertise in: <span>Curing Depression</span></h6>
+          <h6>Address : B-39 D-Block, Defence Colony,Delhi</h6>
+        </div>
+        <div class="contact">
+          <div><i class="fa fa-phone"></i> &nbsp;123456782</div>
+          <div><i class="fa fa-envelope"></i> &nbsp;shashi@tharoor.com</div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="img-cont">
+          <img src="https://icon-library.net/images/psychology-icon/psychology-icon-1.jpg" alt="" />
+        </div>
+        <div class="desc">
+          <h5 class="name-design">Dr. Shahshi Tharoor</h5>
+          <h6>Experience : 3 years</h6>
+          <h6>Expertise in: <span>Curing Depression</span></h6>
+          <h6>Address : B-39 D-Block, Defence Colony,Delhi</h6>
+        </div>
+        <div class="contact">
+          <div><i class="fa fa-phone"></i> &nbsp;123456782</div>
+          <div><i class="fa fa-envelope"></i> &nbsp;shashi@tharoor.com</div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="img-cont">
+          <img src="https://icon-library.net/images/psychology-icon/psychology-icon-1.jpg" alt="" />
+        </div>
+        <div class="desc">
+          <h5 class="name-design">Dr. Shahshi Tharoor</h5>
+          <h6>Experience : 3 years</h6>
+          <h6>Expertise in: <span>Curing Depression</span></h6>
+          <h6>Address : B-39 D-Block, Defence Colony,Delhi</h6>
+        </div>
+        <div class="contact">
+          <div><i class="fa fa-phone"></i> &nbsp;123456782</div>
+          <div><i class="fa fa-envelope"></i> &nbsp;shashi@tharoor.com</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<i class="head fas fa-star"></i><i class="head far fa-star"></i> -->
+    <footer>
+      <div class="footer-1">
+        <p>Copyright © 2019 MAAD. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>

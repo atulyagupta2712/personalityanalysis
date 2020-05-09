@@ -1,0 +1,17 @@
+<div class="home">
+  <img
+    src="http://www.youthincmag.com/wp-content/uploads/2016/07/8-Books-That-Will-Leave-You-Feeling-Amazing-And-On-Top-Of-The-World.jpg"
+    alt=""
+  />
+  <!-- <h1 class="text-center">Welcome to Online Test Examination!</h1> -->
+  <div class="group" *ngIf="isValid">
+    <h2 class="text-center">{{ heading }}</h2>
+    <h2 class="text-center">{{ data }}</h2>
+    <br />
+    <h3 class="text-center">Good luck!</h3>
+  </div>
+  <div>
+    <button (click)="again()">Give the test again</button>
+    <button class="logout" (click)="onstress()">Proceed to Stress Test</button>
+  </div>
+</div>

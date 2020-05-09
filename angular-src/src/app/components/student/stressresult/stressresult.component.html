@@ -1,0 +1,57 @@
+<!-- <button (click)="onlogout()">Logout</button> -->
+<header>
+    <div class="header-1">
+      <a href="#">
+        <img src="https://neuroethicscanada.files.wordpress.com/2014/03/logo2-no-bg.png?w=300" alt="">
+        <span class="header-a">Personalysis</span>
+      </a>
+    </div>
+    <div class="header-2">
+      <button (click)="onLogoutClick()" class="head-btn">Logout
+      </button>
+    </div>
+</header>
+<div class="result-cont">
+  <div class="row1">
+    <div class="personality-result">
+      <div class="heading-cont">
+        <h3 class="result-heading">Personality Test Result</h3>
+      </div>
+      <div class="row1">
+        <div class="img-cont">
+          <img
+            src={{image}}
+            alt=""
+          />
+        </div>
+        <div class="desc-cont">
+          <h3 class="pers-name">{{heading}}</h3>
+          <p class="pers-desc">
+           {{data}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="stress-result">
+      <div class="heading-cont">
+        <h3 class="result-heading">Stress Test Result</h3>
+      </div>
+      <img
+        src="https://demo.w3layouts.com/demos_new/template_demo/19-06-2019/pro_market-demo_Free/1845162954/web/images/s1.png"
+        alt=""
+        class="myImage"
+      />
+      <p class="stress-desc">
+        {{data2}}
+      </p>
+      <button class="consult-btn" (click)="consult()">
+        Consult A Psychologist
+      </button>
+    </div>
+  </div>
+  <footer>
+      <div class="footer-1">
+        <p>Copyright © 2019 MAAD. All Rights Reserved.</p>
+      </div>
+  </footer>
+</div>

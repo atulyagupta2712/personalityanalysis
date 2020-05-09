@@ -1,0 +1,242 @@
+.header-1 a img {
+    width: 12%;
+    height: auto;
+    margin-top: 5px;
+    border-radius: 50%;
+  }
+  
+  header {
+    display: flex;
+    /* border-top: 10px solid rgb(255, 201, 23);*/
+    padding-bottom: 10px;
+    /* background: rgba(248, 216, 74); */
+    background: wheat;
+    border-bottom: 3px solid firebrick;
+  }
+  
+  .header-1 {
+    flex: 1;
+    margin: 0 0 0 5vw;
+  }
+  
+  .header-a {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: black;
+    font-weight: 600;
+    display: inline;
+    vertical-align: bottom;
+    margin-left: -20px;
+    text-decoration: none;
+  }
+  
+  .header-1 a:hover {
+    text-decoration: none;
+  }
+  
+  .header-2 {
+    flex: 1;
+    margin: 1.5vw 5vw 0 0;
+    text-align: right;
+    vertical-align: middle;
+  }
+  
+  .head-btn {
+    border: 1px solid black;
+    margin-left: 15px;
+    margin-top: 5px;
+    padding: 10px 30px;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 2%;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    background: black;
+    letter-spacing: 0.1vw;
+  }
+
+  footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* background: rgba(255, 203, 61); */
+    background: wheat;
+    border-top: 2px solid firebrick;
+  }
+  
+  .footer-1 {
+    margin: 0 10vw;
+    padding: 5px 0;
+  }
+  
+  .footer-1 p {
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    color: black;
+    font-size: 15px;
+  }
+
+
+#img{
+    background: url("https://newevolutiondesigns.com/images/freebies/black-wallpaper-10.jpg") fixed;
+    height: 49vw;
+    /* padding-top: 8%; */
+}
+.group{
+    border: 2px solid black;
+    width: 60%;
+    margin: 0 auto;
+    background:  url("https://media.gettyimages.com/videos/symmetric-lines-with-copy-space-loop-video-id1084834232?s=640x640");
+    background-size: cover;
+    max-height: 100%;
+    margin-top: 2.5%;
+}
+#row{
+    display: flex;
+    padding: 0% 2% 2%;
+}
+#image{
+    max-width: 50%;
+    border: 1px solid black;
+    flex: 1;
+    height:28vw;
+}
+
+.next{
+    width: 25%;
+    display: inline-block;
+    text-align:center;
+    margin:2%;
+    margin-left: 1%;
+    margin-top: 10%;
+    border: 1px solid;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background-color: palegoldenrod;
+    color: firebrick;
+}
+.next:hover{
+    background-color: firebrick;
+    color: palegoldenrod;
+    border: 1px solid bisque;
+}
+.btn-primary:focus {
+    box-shadow: none;
+}
+.btn-primary:not(:disabled):not(.disabled):active {
+    color: #fff;
+    background-color: firebrick;
+    border-color: palegoldenrod;
+}
+hr{
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.subhead{
+    background-color:palegoldenrod ;
+    z-index:4;
+    margin-top: 2%;
+    padding:3px 4px;
+    width:70%;
+}
+h3{
+    display: inline;
+    background-color: firebrick;
+    padding: 2% 3%;
+    color: palegoldenrod;
+    font-family: 'Merriweather', serif;
+}
+form {
+    width: 100%;
+    padding:5% 2% 1% 9%;
+    flex: 1;
+}
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    width: 100%;
+    font-family: 'Dosis', sans-serif;
+}
+input{
+    margin: 0% 0%;
+}
+span{
+    color: black;
+    font-size: 30px;
+    font-family: 'Satisfy', sans-serif;
+    display: block;
+    margin-bottom: 4%;
+}
+@media(max-width: 1350px){
+    img{
+        height: 600px;
+    }
+}
+@media(max-width: 708px){
+   h2{
+       font-size: 32px;
+   }
+   span{
+       font-size: 24px;
+   }
+   .next{
+       width: 30%;
+       margin-left: 12%;
+   }
+   input{
+       margin: 2.8% 5%;
+   }
+   .group{
+    width: 90%;
+    top: 2%;
+    left: 5%;
+    padding: 1.5%;
+}
+}
+@media(max-width: 480px){
+    img{
+        height: 900px;
+    }
+    
+    .next{
+        width: 33%;
+        font-size: 20px;
+       
+        margin: 4%;
+        margin-left: 10%;
+    }
+    span{
+        font-size: 23px;
+    }
+    h2{
+        font-size: 28px;
+    }
+ }
+ @media(max-width: 380px){
+   
+    h2{
+        font-size: 28px;
+    }
+    .next{
+        width: 38%;
+        font-size: 20px;
+       
+        margin: 4%;
+       
+    }
+    
+ }
+ @media(max-width: 320px){
+     h2{
+         font-size: 26px;
+     }
+     .next{
+         width: 42%;
+         margin-left: 2%;
+     }
+ }
+ 

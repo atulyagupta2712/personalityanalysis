@@ -1,0 +1,25 @@
+<div class="chat">
+  <div id="chat-room">
+    <h2>{{ username }}</h2>
+    <span><i *ngIf="isTyping" class="isTyping">typing...</i></span>
+    <div class="subchat">
+      <div id="chat-window">
+        <div id="chat-window-sub" *ngIf="messageArray">
+          <div [class]="(item.user == currentUser) ? 'userMessage message' : 'secUserMessage message'" *ngFor="let item of messageArray">
+            <span>{{item.user}}</span>
+           <div  *ngIf="item.user">
+            <p>{{ item.message }}</p>
+           </div>
+          </div>
+        </div>
+      </div>
+      <input (keypress)="typing()" [(ngModel)]="message" name="message" type="text" placeholder="Message" required>
+      <button id="send" (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-1">
+      <p>Copyright © 2019 MAAD. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>

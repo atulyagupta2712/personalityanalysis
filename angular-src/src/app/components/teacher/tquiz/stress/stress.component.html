@@ -1,0 +1,25 @@
+<div>
+    <img src="https://p.w3layouts.com/demos_new/template_demo/14-08-2018/edulearn-demo_Free/275217196/web/images/bg5.jpg" alt="" srcset="">
+  
+   <div class="group">
+     <span><h5>Enter your question</h5>  <textarea name="" id="" cols="76" rows="2" [(ngModel)]="questionName"> </textarea></span>
+   
+    <span>Enter option 1 <input type="text" [(ngModel)]="option1"></span>
+    
+     <span>Enter option 2 <input type="text" [(ngModel)]="option2"></span>
+    
+     <span>Enter option 3 <input type="text" [(ngModel)]="option3"></span>
+     
+     <span>Enter option 4
+        <input type="text" [(ngModel)]="option4">
+     </span>
+     <span>Enter correct answer
+        <input type="text" class= "correct" [(ngModel)] = "correctAnswer">
+     </span>
+     
+     <button type="submit" value="submit" class="btn btn-primary" (click)="onsoftware()">Submit</button>
+     <button class="btn btn-success" (click)="end()">End</button>
+   </div>
+  
+  </div>
+  

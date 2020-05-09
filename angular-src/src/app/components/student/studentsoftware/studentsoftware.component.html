@@ -1,0 +1,33 @@
+<div id="img">
+    <header>
+        <div class="header-1">
+          <a href="#">
+            <img src="https://neuroethicscanada.files.wordpress.com/2014/03/logo2-no-bg.png?w=300" alt="">
+            <span class="header-a">Personalysis</span>
+          </a>
+        </div>
+        <div class="header-2">
+          <button (click)="onLogoutClick()" class="head-btn">Logout
+          </button>
+        </div>
+    </header>
+  <div class="group">
+    <h3>What do you see first?</h3>
+    <p class="subhead">Here,  A picture will be shown and you have to choose the image which you will see instantly.</p>
+    <hr>
+    <div id="row">
+      <img src={{questionObject.questionName}} id="image" alt="">
+      <form  [formGroup]="quesForm" (ngSubmit)="onsoftware()">
+          <span><label for="o1"><input type="radio" id="o1" formControlName="option"  [value]="questionObject.option1"> {{questionObject.option1}}</label></span>
+          <span><label for="o3"><input type="radio" id="o3" formControlName="option"  [value]="questionObject.option3"> {{questionObject.option3}}</label></span>
+          <button type="submit" value="submit" class="btn next btn-primary" >Next</button>
+          <!-- <button class="btn btn-success" (click)="again()">Finish Quiz</button> -->
+      </form>
+    </div>
+  </div>
+  <footer>
+      <div class="footer-1">
+        <p>Copyright © 2019 MAAD. All Rights Reserved.</p>
+      </div>
+  </footer>
+</div>

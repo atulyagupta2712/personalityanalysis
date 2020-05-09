@@ -1,0 +1,19 @@
+.container-fluid{
+    width: 100% !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+#container{
+    margin:0;
+    padding:0;
+    position: relative;
+}
+
+flash-messages{
+    position: absolute;
+    width:100%;
+    top:0;
+    z-index:2;
+}

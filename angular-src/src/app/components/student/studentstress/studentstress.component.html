@@ -1,0 +1,39 @@
+<div id="img">
+  <header>
+    <div class="header-1">
+      <a href="#">
+        <img src="https://neuroethicscanada.files.wordpress.com/2014/03/logo2-no-bg.png?w=300" alt="">
+        <span class="header-a">Personalysis</span>
+      </a>
+    </div>
+    <div class="header-2">
+      <button (click)="onLogoutClick()" class="head-btn">Logout
+      </button>
+    </div>
+  </header>
+  <div class="group">
+    <h3>Stress Test</h3>
+    <p class="subhead">Answer some of the basic questions to know whether you have stress or not.</p>
+    <hr>
+    <div class="sub-div">
+      <h2>{{questionObject.questionName}}</h2>
+      <form [formGroup]="quesForm" (ngSubmit)="onsoftware()">
+        <span><label for="o1"><input type="radio" id="o1" formControlName="option" [value]="questionObject.option1">
+            {{questionObject.option1}}</label></span>
+        <span><label for="o2"><input type="radio" id="o2" formControlName="option" [value]="questionObject.option2">
+            {{questionObject.option2}}</label></span>
+        <span><label for="o3"><input type="radio" id="o3" formControlName="option" [value]="questionObject.option3">
+            {{questionObject.option3}}</label></span>
+        <span><label for="o4"><input type="radio" id="o4" formControlName="option" [value]="questionObject.option4">
+            {{questionObject.option4}}</label></span>
+        <button type="submit" value="submit" class="btn next btn-primary">Next</button>
+        <!-- <button class="btn btn-success" (click)="finish()">Finish Quiz</button> -->
+      </form>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-1">
+      <p>Copyright © 2019 MAAD. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>

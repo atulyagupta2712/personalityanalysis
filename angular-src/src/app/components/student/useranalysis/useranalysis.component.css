@@ -1,0 +1,179 @@
+.header-1 a img {
+  width: 12%;
+  height: auto;
+  margin-top: 5px;
+  border-radius: 50%;
+}
+
+header {
+  display: flex;
+  /* border-top: 10px solid rgb(255, 201, 23);*/
+  padding-bottom: 10px;
+  /* background: rgba(248, 216, 74); */
+  background: wheat;
+  border-bottom: 3px solid firebrick;
+}
+
+.header-1 {
+  flex: 1;
+  margin: 0 0 0 5vw;
+}
+
+.header-a {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: black;
+  font-weight: 600;
+  vertical-align: bottom;
+  margin-left: -20px;
+  text-decoration: none;
+}
+
+.header-1 a:hover {
+  text-decoration: none;
+}
+
+.header-2 {
+  flex: 1;
+  margin: 1.5vw 5vw 0 0;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.head-btn {
+  border: 1px solid black;
+  margin-left: 15px;
+  margin-top: 5px;
+  padding: 10px 30px;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 2%;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  background: black;
+  letter-spacing: 0.1vw;
+}
+
+.main-div {
+  background-color: white;
+  padding: 0% !important;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+  width: 100%;
+  min-height: 49vw;
+}
+
+#head-bg {
+  background-image: url("https://user-images.githubusercontent.com/35227081/67394972-c3dcd180-f5c2-11e9-8689-3cc3dd119ab3.jpg");
+  background-size: cover;
+}
+
+.heading {
+  padding: 7% 0%;
+  color: white;
+  text-align: center;
+  font-family: "Merriweather", sans-serif;
+}
+
+.heading h2 {
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.column {
+  width: 23.3%;
+  margin: 10px;
+}
+
+.card-cont {
+  padding-bottom: 3% !important;
+  margin:0 auto;
+  background-color: white;
+}
+
+.card {
+  margin: 3% 0%;
+}
+
+.img-cont,
+.desc,
+.contact {
+  padding: 4%;
+  background-color: rgb(255, 201, 23);
+  color:black;
+}
+.img-cont, .desc{
+  border: 1px solid white;
+}
+
+.img-cont h5{
+  margin:0;
+}
+
+.content1{
+  flex:1;
+  margin-right:5%;
+}
+
+.content2{
+  flex:2;
+}
+
+.content2 button{
+  border: none;
+  border-radius: 10px;
+  padding: 3% 12%;
+  margin: 10px 0 0;
+  background: white
+}
+
+.head{
+  color:rgb(255, 201, 23);
+}
+
+.desc .content1 img {
+  border-radius: 50%;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.desc{
+  color: white;
+  background-color: rgb(73, 43, 26);
+  display: flex;
+}
+
+/* .desc {
+  color: color;
+  font-weight: 400;
+  display:flex;
+} */
+
+.name-design {
+  color: rgb(73, 43, 26);
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* background: rgba(255, 203, 61); */
+  background: wheat;
+  border-top: 2px solid firebrick;
+}
+
+.footer-1 {
+  margin: 0 10vw;
+  padding: 5px 0;
+}
+
+.footer-1 p {
+  margin: 0;
+  font-family: 'Roboto Slab', serif;
+  color: black;
+  font-size: 15px;
+}

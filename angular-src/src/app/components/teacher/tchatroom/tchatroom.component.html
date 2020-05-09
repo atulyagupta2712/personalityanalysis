@@ -1,0 +1,32 @@
+<div id="img">
+  <header>
+    <div class="header-1">
+      <a href="#">
+        <img src="https://neuroethicscanada.files.wordpress.com/2014/03/logo2-no-bg.png?w=300" alt="">
+        <span class="header-a">Personalysis</span>
+      </a>
+    </div>
+    <div class="header-2">
+      <button (click)="onLogoutClick()" class="head-btn">Logout
+      </button>
+    </div>
+  </header>
+  <div class="group">
+    <h1>Users</h1>
+    <div class="table-div">
+      <table class="table table-hover">
+        <tbody>
+          <tr *ngFor="let user of Users">
+            <td >{{ user.username }}</td>
+            <td ><button class="btn btn-success button" routerLink="/tchat" [queryParams]="{ name: user.username, email: user.email }" >Chat</button></td>
+          </tr>   
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-1">
+      <p>Copyright © 2019 MAAD. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>

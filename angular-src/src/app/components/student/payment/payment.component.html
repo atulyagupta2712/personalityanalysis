@@ -1,0 +1,54 @@
+<div class="login">
+  <div class="login-1">
+    <h1>Pay to Chat</h1>
+    <div class="content">
+      <!-- <div class="content1">
+        <img src="https://p.w3layouts.com/demos/aug-2016/29-08-2016/grocery_payment_widget/web/images/banner1.jpg" alt="">
+      </div> -->
+      <div class="cell example example5 content2">
+        <form (submit)="onPaySubmit()">
+          <div id="example5-paymentRequest">
+            <!--Stripe paymentRequestButton Element inserted here-->
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="example5-name" data-tid="elements_examples.form.name_label">Name</label>
+              <input id="example5-name" [(ngModel)] = "name" name="name" data-tid="elements_examples.form.name_placeholder" class="input" type="text"
+                placeholder="Name" autocomplete="name">
+              <span id="req11"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="example5-email" data-tid="elements_examples.form.email_label">Email</label>
+              <input id="example5-email" [(ngModel)] = "email" name="email" data-tid="elements_examples.form.email_placeholder" class="input" type="email"
+                placeholder="Email" autocomplete="email">
+              <span id="req21"></span>
+            </div>
+            <div class="field">
+              <label for="example5-phone" data-tid="elements_examples.form.phone_label">Phone</label>
+              <input id="example5-phone" [(ngModel)] = "phone" name="phone" data-tid="elements_examples.form.phone_placeholder" class="input" type="text"
+                placeholder="Contact No." autocomplete="tel">
+              <span id="req31"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="example5-card" data-tid="elements_examples.form.card_label">Card</label>
+              <div id="example5-card"></div>
+            </div>
+          </div>
+          <button id="Pay" type="submit" data-tid="elements_examples.form.pay_button">Proceed to Pay: Rs.100</button>
+          <div class="error visible" role="alert">
+            <span class="message">{{errorMessage}}</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-1">
+      <p>Copyright © 2019 MAAD. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>

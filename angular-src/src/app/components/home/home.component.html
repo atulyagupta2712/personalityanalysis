@@ -1,0 +1,135 @@
+<div class="home">
+  <!-- <img  src="http://www.youthincmag.com/wp-content/uploads/2016/07/8-Books-That-Will-Leave-You-Feeling-Amazing-And-On-Top-Of-The-World.jpg" alt="">
+    <h1 class="text-center">Welcome to Personality Analysis Test!</h1>
+     <div class="group" *ngIf = "!isValid">
+      <h2 class="text-center">Who are you?</h2>
+      <button [disabled]="isValid" (click)="onTeacher()">Personality Analyst</button>
+      <button [disabled]="isValid" (click)="onStudent()">User</button>
+     </div>
+     <h3 *ngIf = "isValid" class="text-center">Please logout from your currrent account!</h3>
+     <button *ngIf = "isValid" class="dash" [disabled]="teacher" (click)="teacherd()">Teacher Dashboard</button>
+     <button *ngIf = "isValid" class="dash2" [disabled]="student" (click)="studentd()">Student dashboard</button> -->
+
+  <header>
+    <div class="header-1">
+      <a href="#">
+        <img src="https://neuroethicscanada.files.wordpress.com/2014/03/logo2-no-bg.png?w=300" alt="">
+        <span class="header-a">Personalysis</span>
+      </a>
+    </div>
+    <div class="header-2">
+      <button class="head-btn">Login
+        <div class="dropdown">
+          <ul>
+            <li><a (click)="onStudent()"> Candidate</a></li>
+            <li><a (click)="onTeacher()"> Psychologist</a></li>
+          </ul>
+        </div>
+      </button>
+      <button class="head-btn">Register
+        <div class="dropdown">
+          <ul>
+            <li><a (click)="onStudentReg()"> Candidate</a></li>
+            <li><a (click)="onTeacherReg()"> Psychologist</a></li>
+          </ul>
+        </div>
+      </button>
+    </div>
+  </header>
+  <div class="home-1">
+    <div class="home-11">
+      <h4 class="h0">what's</h4>
+      <span>
+        <h4 class="h1">your </h4>
+        <h1 class="h2">Personality</h1>
+        <h4 class="h3">Style</h4>
+        <h3 class="h5">?</h3>
+      </span>
+      <h3 class="h4">Stress</h3>
+    </div>
+    <div class="home-12">
+      <div class="home-112 ho11">
+        <img src="https://www.16personalities.com/images/types/intj.png" alt="">
+      </div>
+      <div class="home-112 ho11">
+        <img src="https://www.16personalities.com/images/types/infp.png" alt="">
+      </div>
+      <div class="home-112 ho11">
+        <img src="https://www.16personalities.com/images/types/estj.png" alt="">
+      </div>
+      <div class="home-112 ho11">
+        <img src="https://www.16personalities.com/images/types/istp.png" alt="">
+      </div>
+      <div class="home-112 ho11">
+        <img src="https://www.16personalities.com/images/types/entp.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="home-2">
+    <div class="taketest">
+      <h1>Discover the real <span class="you">YOU</span></h1>
+      <p>Personalysis is a free online personality test.<br>
+        Join over 1000+ people who've already taken the test!</p>
+      <button (click)="onStudent()">Take the Free Test</button>
+    </div>
+  </div>
+  <div class="home-3">
+    <div class="home-31">
+      <img src="https://storage.googleapis.com/neris/public/images/test-header-1.svg" alt="">
+      <div class="home-311">
+        <h3>Fast & Easy</h3>
+        <p>Takes less than 12 minutes.</p>
+      </div>
+    </div>
+    <div class="home-31">
+      <img src="https://storage.googleapis.com/neris/public/images/test-header-2.svg" alt="">
+      <div class="home-311">
+        <h3>Be Yourself</h3>
+        <p>Answer honestly, even if you don’t like the answer.</p>
+      </div>
+    </div>
+    <div class="home-31">
+      <img src="https://storage.googleapis.com/neris/public/images/test-header-3.svg" alt="">
+      <div class="home-311">
+        <h3>Complete It All</h3>
+        <p>Try not to leave any “neutral” answers.</p>
+      </div>
+    </div>
+  </div>
+  <div class="home-4">
+    <div class="home-41">
+      <!-- <div class="home-411">
+        <img src="https://i.pinimg.com/564x/92/7b/06/927b06914d7167b394029c8960067580.jpg" alt="">
+      </div>
+      <div class="home-411 ho-41">
+        <img src="https://dailyillini.com/wp-content/uploads/2017/08/Stress-01.png" alt="">
+      </div> -->
+      <div class="home-412">
+        <h5> &ldquo; Personality has the power to uplift, power to depress, power to curse and power to bless &rdquo;
+        </h5>
+        <p>Stress represents a normal, necessary and unavoidable life phenomenon which can generate temporary discomfort
+          as well as
+          long-term consequences. Scientific data confirm the idea
+          that personality is an important factor in identifying, responding and approaching stress events. Mental
+          health professionals believe personality plays a significant role in how we perceive stress. <br>
+          Psychological
+          theories state that stress is born from internal conflicts, such as the struggle between our true or actual
+          self and our ideal self, between unconscious views or needs or between our image of reality and actuality. For
+          example, for the average student who wants to go on to a high-level college, taking entrance exams may be more
+          stressful because he is unaware that he is putting pressure on himself to go beyond his own capabilities. </p>
+      </div>
+    </div>
+  </div>
+  <div class="home-5">
+    <div class="home-51">
+      <h1>Accurate Results. Insightful Information.</h1>
+      <h1>Get Started Now - Free</h1>
+      <button (click)="onStudent()">Take the Personalysis Test</button>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-1">
+      <p>Copyright © 2019 MAAD. All Rights Reserved.</p>
+    </div>
+  </footer>
+</div>

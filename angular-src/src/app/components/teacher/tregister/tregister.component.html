@@ -1,0 +1,79 @@
+<!-- <form (submit) = "onRegister()" novalidate>
+    <img src="https://p.w3layouts.com/demos_new/template_demo/14-08-2018/edulearn-demo_Free/275217196/web/images/banner2.jpg" alt="" srcset="">
+   <div class="group">
+     <h3 class="text-center">
+       Register yourself
+     </h3>
+      <div class="form-group">
+          <label>Name</label>
+          <input type="text" [(ngModel)] = "name" name="name" class="form-control" id="exampleInputName"  placeholder="Enter your name">
+          <!-- <span *ngIf="registration.name.$touched && registration.name.$error['required']">Name cannot be empty</span> -->
+        <!-- </div>
+        <div class="form-group">
+            <label for="exampleInputUsername">Username</label>
+            <input type="text" [(ngModel)] = "username" name="username"  class="form-control" id="exampleInputUsername" placeholder="Enter your Username">
+          </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" [(ngModel)] = "email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+        
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" [(ngModel)] = "password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      
+     
+      <button type="submit" value="submit" class="btn btn-primary submit">Submit</button>
+      <button (click)="onLogin()" class="btn btn-success login1">Login</button>
+ 
+   </div> 
+  
+  </form>
+  <h4>Already have an account? Login here <button (click)="onLogin()" class="btn btn-success login2">Login</button></h4> --> 
+
+  <div class="register">
+    <!-- <header>
+      <div class="header-1">
+        <a href="#">
+          <img src="https://neuroethicscanada.files.wordpress.com/2014/03/logo2-no-bg.png?w=300" alt="">
+          <span class="header-a">Personalysis</span>
+        </a>
+      </div>
+    </header> -->
+    <div class="register-1">
+      <h1>Create New Account</h1>
+      <form (submit) = "onRegister()" novalidate>
+        <h3 class="text-center">Take The Free Test</h3>
+        <div class="form-section">
+          <label>Username <span class="w3ls-star"> * </span></label>
+          <input type="text" [(ngModel)] = "username" name="username" placeholder="Enter username" required=" ">
+          <span class="loginUsername"></span>
+        </div>
+        <div class="form-section">
+          <label>Email <span class="w3ls-star"> * </span></label>
+          <input type="email" [(ngModel)] = "email" name="email" placeholder="Enter email" required=" ">
+          <span class="loginPassword"></span>
+        </div>
+        <div class="form-section">
+          <label>Password <span class="w3ls-star"> * </span></label>
+          <input type="password" [(ngModel)] = "password" name="password" placeholder="Enter password" required=" ">
+          <span class="loginPassword"></span>
+        </div>
+        <div class="form-section">
+          <label>Confirm Password <span class="w3ls-star"> * </span></label>
+          <input type="password" [(ngModel)] = "name" name="password" placeholder="Confirm password" required=" ">
+          <span class="loginPassword"></span>
+        </div>
+        <div class="form-group">
+            <button type="submit" value="submit" class="login1">Register</button> <br>
+            <span>Already a Member? <a (click)="onLogin()" class="log1">Sign in</a></span>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <div class="footer-1">
+        <p>Copyright © 2019 MAAD. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
