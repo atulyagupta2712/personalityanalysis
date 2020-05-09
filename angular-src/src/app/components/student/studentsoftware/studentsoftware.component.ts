@@ -5,6 +5,8 @@ import { NgForm } from '@angular/forms';
 import { FormControl, FormGroup} from '@angular/forms'
 import { FlashMessagesService } from 'angular2-flash-messages';
 
+declare var p5: any;
+
 @Component({
   selector: 'app-studentsoftware',
   templateUrl: './studentsoftware.component.html',
@@ -17,6 +19,9 @@ export class StudentsoftwareComponent implements OnInit {
   score: number=0;
   questionIndex: number=0;
   quesForm: FormGroup;
+  foo: any;
+  foo1: any;
+  mic: any;
 
   constructor(
     private authService: AuthService,
@@ -37,10 +42,40 @@ export class StudentsoftwareComponent implements OnInit {
         this.questionObject= this.questions[this.questionIndex];
       }
     },
-  error=>{
-    console.log(error);
-  })
+    error=>{
+      console.log(error);
+    })
+    this.foo = new p5.Speech();
+    const sketch = (s) => {
+      s.setup = () => {
+        
+          this.foo.speak('hi there, welcome to Personalysis, the personality cum stress quiz. Please register if you are new here or login if you have already been here.');
+          console.log("hii..")
+         
+      };
+    }
+    let canvas = new p5(sketch);
   }
+
+  startMic(){
+    this.foo1 = new p5.SpeechRec('en-US', ()=>{
+      console.log(this.foo1.resultString);
+      
+    });
+    this.foo1.continuous = true; // do continuous recognition
+    this.foo1.interimResults = false;
+    const sketch = (s) => {
+      s.setup = () => {
+          this.foo1.start();
+      };
+    }
+    let canvas = new p5(sketch);
+  }
+
+  stopMic(){
+    this.router.navigate(['studentalgo']);
+  }
+
    onLogoutClick(){
     this.authService.onLogout();
     this.flashMessage.show('You have logged out successfully', {cssClass: 'alert-success', timeout: 4000});
@@ -62,17 +97,12 @@ export class StudentsoftwareComponent implements OnInit {
         this.questionObject = this.questions[this.questionIndex];
       }
       if(this.questionIndex == this.questions.length){
-        this.again();
+        // this.again();
       }
       this.quesForm = new FormGroup({
         option: new FormControl()
       })
      }
     
-  }
-  again(){
-    // localStorage.setItem('score', JSON.stringify(this.score));
-    // localStorage.setItem('length', this.questions.length);
-    this.router.navigate(['studentalgo']);
   }
 }

@@ -12,17 +12,16 @@
         </div>
     </header>
   <div class="group">
-    <h3>What do you see first?</h3>
-    <p class="subhead">Here,  A picture will be shown and you have to choose the image which you will see instantly.</p>
+    <h3>Audio Test</h3>
+    <p class="subhead">Here, you have to speak the following lines, so that your voice can be recorded and analysed. <br>Please note that you have to speak all the lines in one go.</p>
     <hr>
     <div id="row">
-      <img src={{questionObject.questionName}} id="image" alt="">
-      <form  [formGroup]="quesForm" (ngSubmit)="onsoftware()">
-          <span><label for="o1"><input type="radio" id="o1" formControlName="option"  [value]="questionObject.option1"> {{questionObject.option1}}</label></span>
-          <span><label for="o3"><input type="radio" id="o3" formControlName="option"  [value]="questionObject.option3"> {{questionObject.option3}}</label></span>
-          <button type="submit" value="submit" class="btn next btn-primary" >Next</button>
-          <!-- <button class="btn btn-success" (click)="again()">Finish Quiz</button> -->
-      </form>
+      <span>
+        Picture yourself walking through a beautiful forest. The sun is out; there's a perfect breeze. It's just beautiful. Who are you walking with? As you continue in your walk through the forest, you come across an animal. What kind of animal is it? You're walking deeper into the woods, and you come to a clearing. There's house in the middle of the clearing. How big is it? Is it fenced or not?
+      </span>
+      <button (click)="startMic()" class="btn next" >Start Recording <span class="icon"><i class="fas fa-microphone"></i></span></button>
+      <button (click)="stopMic()"  class="btn next" >Save Recording <span class="icon"><i class="fas fa-save"></i></span></button>
+      <!-- <button class="btn btn-success" (click)="again()">Finish Quiz</button> -->
     </div>
   </div>
   <footer>

@@ -63,3 +63,7 @@ html,body{
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
 }
+
+.p5Canvas{
+    height:0 !important;
+}

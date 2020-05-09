@@ -17,6 +17,10 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
+    if(localStorage.getItem('window') == null){
+      window.location.reload();
+      localStorage.setItem('window', JSON.stringify('1'))
+    }
    if(localStorage.getItem('user')|| localStorage.getItem('teacher')){
      this.isValid= !this.isValid;
    }
@@ -28,43 +32,42 @@ export class HomeComponent implements OnInit {
    }
    
    this.foo = new p5.Speech();
-   console.log(this.foo)
     const sketch = (s) => {
       s.setup = () => {
         if(this.count == 1){
           this.foo.speak('hi there, welcome to Personalysis, the personality cum stress quiz. Please register if you are new here or login if you have already been here.');
           console.log("hii..")
+         
           this.count++;
         }
       };
     }
     let canvas = new p5(sketch);
   }
-
-
-  refresh(){
-    window.location.reload();
-    console.log('reload')
-  }
   
   onTeacher(){
+    localStorage.setItem('window', null)
     this.router.navigate(['/tlogin']);
   }
   onStudent(){
+    localStorage.setItem('window', null)
     this.router.navigate(['/login']);
   }
   onTeacherReg(){
+    localStorage.setItem('window', null)
     this.router.navigate(['/tregister']);
   }
   onStudentReg(){
+    localStorage.setItem('window', null)
     this.router.navigate(['/register']);
   }
 
   studentd(){
+    localStorage.setItem('window', null)
     this.router.navigate(['dashboard']);
   }
   teacherd(){
+    localStorage.setItem('window', null)
     this.router.navigate(['tdashboard']);
   }
-
 }
