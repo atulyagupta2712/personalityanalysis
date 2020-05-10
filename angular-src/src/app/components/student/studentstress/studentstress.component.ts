@@ -1,91 +1,122 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../../services/auth.service';
-import { Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
-import { FormControl, FormGroup} from '@angular/forms'
-import { FlashMessagesService } from 'angular2-flash-messages';
+import { Component, OnInit } from "@angular/core";
+import { AuthService } from "../../../services/auth.service";
+import { Router } from "@angular/router";
+import { NgForm } from "@angular/forms";
+import { FormControl, FormGroup } from "@angular/forms";
+import { FlashMessagesService } from "angular2-flash-messages";
+
+declare var p5: any;
 
 @Component({
-  selector: 'app-studentstress',
-  templateUrl: './studentstress.component.html',
-  styleUrls: ['./studentstress.component.css']
+  selector: "app-studentstress",
+  templateUrl: "./studentstress.component.html",
+  styleUrls: ["./studentstress.component.css"],
 })
 export class StudentStressComponent implements OnInit {
+  questions: any;
+  questionObject: any;
+  score: number = 0;
+  questionIndex: number = 0;
+  quesForm: FormGroup;
+  foo: any;
 
-    questions:any;
-    questionObject: any;
-    score: number=0;
-    questionIndex: number=0;
-    quesForm: FormGroup;
-  
-    constructor(
-      private authService: AuthService,
-      private router: Router,
-      private flashMessage: FlashMessagesService
-    ) { 
-      this.questionObject={};
-      this.quesForm = new FormGroup({
-        option: new FormControl()
-      })
-    }
-  
-    ngOnInit() {
-  
-      this.authService.getStressQuestion().subscribe(data=>{
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private flashMessage: FlashMessagesService
+  ) {
+    this.questionObject = {};
+    this.quesForm = new FormGroup({
+      option: new FormControl(),
+    });
+  }
+
+  ngOnInit() {
+    // console.log("Stress Student Compnenent ");
+    this.authService.getStressQuestion().subscribe(
+      (data) => {
         // console.log(data)
-        if(data.success){
+        if (data.success) {
           this.questions = data.msg;
-          this.questionObject= this.questions[this.questionIndex];
+          this.questionObject = this.questions[this.questionIndex];
         }
       },
-    error=>{
-      console.log(error);
-    })
-    }
-    onsoftware(){
-     
-      var data = this.quesForm.get('option').value;
-      if(!data){
-        this.flashMessage.show("Please choose 1 option!", {cssClass: 'alert-danger',  timeout: 4000});
+      (error) => {
+        console.log(error);
       }
-      else{
-      if(data == this.questions[this.questionIndex].option1 || data == ' '+this.questions[this.questionIndex].option1){
-        this.score= this.score + 4;
-      }
-      if(data == this.questions[this.questionIndex].option2 || data == ' '+this.questions[this.questionIndex].option2){
-        this.score+=3;
-      }
-      if(data == this.questions[this.questionIndex].option3 || data == ' '+this.questions[this.questionIndex].option3){
+    );
+    setTimeout(function () {
+      this.foo = new p5.Speech();
 
-        this.score+=2;
+      const sketch = (s) => {
+        s.setup = () => {
+          this.foo.speak(
+            `This is stress test section. Here, Answer some of the basic questions to know whether you have stress or not. `
+          );
+          console.log("hii..");
+        };
+      };
+      let canvas = new p5(sketch);
+    }, 2000);
+  }
+  onsoftware() {
+    var data = this.quesForm.get("option").value;
+    if (!data) {
+      this.flashMessage.show("Please choose 1 option!", {
+        cssClass: "alert-danger",
+        timeout: 4000,
+      });
+    } else {
+      if (
+        data == this.questions[this.questionIndex].option1 ||
+        data == " " + this.questions[this.questionIndex].option1
+      ) {
+        this.score = this.score + 4;
       }
-      if(data == this.questions[this.questionIndex].option4 || data == ' '+this.questions[this.questionIndex].option4){
-        this.score+=1;
+      if (
+        data == this.questions[this.questionIndex].option2 ||
+        data == " " + this.questions[this.questionIndex].option2
+      ) {
+        this.score += 3;
+      }
+      if (
+        data == this.questions[this.questionIndex].option3 ||
+        data == " " + this.questions[this.questionIndex].option3
+      ) {
+        this.score += 2;
+      }
+      if (
+        data == this.questions[this.questionIndex].option4 ||
+        data == " " + this.questions[this.questionIndex].option4
+      ) {
+        this.score += 1;
       }
       console.log(this.score);
-      if(this.questionIndex < this.questions.length){
+      if (this.questionIndex < this.questions.length) {
         this.questionIndex++;
         this.questionObject = this.questions[this.questionIndex];
       }
-      if(this.questionIndex == this.questions.length){
+      if (this.questionIndex == this.questions.length) {
         this.again();
       }
       this.quesForm = new FormGroup({
-        option: new FormControl()
-      })
+        option: new FormControl(),
+      });
     }
-    }
-    again(){
-      localStorage.setItem('stressscore', JSON.stringify(this.score));
-     
-      this.router.navigate(['stressresult']);
-    }
-    
-  onLogoutClick(){
+  }
+  again() {
+    localStorage.setItem("stressscore", JSON.stringify(this.score));
+
+    this.router.navigate(["stressresult"]);
+  }
+
+  onLogoutClick() {
     this.authService.onLogout();
-    this.flashMessage.show('You have logged out successfully', {cssClass: 'alert-success', timeout: 4000});
-    this.router.navigate(['/']);
+    this.flashMessage.show("You have logged out successfully", {
+      cssClass: "alert-success",
+      timeout: 4000,
+    });
+    this.router.navigate(["/"]);
     return false;
   }
-  }
-  
+}

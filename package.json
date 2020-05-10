@@ -16,7 +16,7 @@
     "ejs": "^3.0.2",
     "express": "^4.16.3",
     "jsonwebtoken": "^8.3.0",
-    "mongoose": "^5.2.9",
+    "mongoose": "^5.9.13",
     "p5": "^1.0.0",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
