@@ -17,10 +17,6 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    if (localStorage.getItem("window") == null) {
-      window.location.reload();
-      localStorage.setItem("window", JSON.stringify("1"));
-    }
     if (localStorage.getItem("user") || localStorage.getItem("teacher")) {
       this.isValid = !this.isValid;
     }
@@ -31,20 +27,6 @@ export class HomeComponent implements OnInit {
       this.teacher = false;
     }
 
-    // this.foo = new p5.Speech();
-    // const sketch = (s) => {
-    //   s.setup = () => {
-    //     if (this.count == 1) {
-    //       this.foo.speak(
-    //         "hi there, welcome to Personalysis, the personality cum stress quiz.Here, you have to speak the following lines, so that your voice can be recorded and analysed.Please note that you have to speak all the lines in one go. "
-    //       );
-    //       console.log("hii.. from home component");
-
-    //       this.count++;
-    //     }
-    //   };
-    // };
-    // let canvas = new p5(sketch);
   }
 
   onTeacher() {

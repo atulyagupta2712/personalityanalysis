@@ -54,6 +54,7 @@ export class TdashboardComponent implements OnInit {
         console.log(data);
         if (data.success) {
           this.flashMessage.show("Psychologist successfully added!", { cssClass: 'alert-success', timeout: 3000 });
+          this.router.navigate(['tchatroom']);
         }
         else {
           this.flashMessage.show(data.msg, { cssClass: 'alert-danger' });

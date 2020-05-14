@@ -49,7 +49,7 @@ export class TregisterComponent implements OnInit {
 
             if (data.success) {
               this.flashMessage.show(data.msg, { cssClass: 'alert-success', timeout: 4000 });
-              this.router.navigate(['tchatroom']);
+              this.router.navigate(['tdashboard']);
             }
             else {
               // console.log("dataregisteredd");

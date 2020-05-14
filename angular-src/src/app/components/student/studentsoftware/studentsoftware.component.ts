@@ -62,6 +62,7 @@ export class StudentsoftwareComponent implements OnInit {
   startMic() {
     this.foo1 = new p5.SpeechRec("en-US", () => {
       console.log(this.foo1.resultString);
+      
     });
     this.foo1.continuous = true; // do continuous recognition
     this.foo1.interimResults = false;

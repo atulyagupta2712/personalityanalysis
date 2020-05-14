@@ -91,7 +91,7 @@
     background:  url("https://media.gettyimages.com/videos/symmetric-lines-with-copy-space-loop-video-id1084834232?s=640x640");
     background-size: cover;
     max-height: 100%;
-    margin-top: 2.5%;
+    margin-top: 5%;
 }
 #row{
     padding: 1% 5%;
@@ -175,7 +175,7 @@ input{
 }
 span{
     color: black;
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Satisfy', sans-serif;
     display: block;
     margin-bottom: 4%;
