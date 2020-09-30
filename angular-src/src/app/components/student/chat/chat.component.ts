@@ -66,13 +66,14 @@ export class ChatComponent implements OnInit {
   typing() {
     this.webSocketService.typing({ room: this.chatroom, user: this.userService.getLoggedInUser().username });
   }
+  
   finishMessage(){
-   prompt("Please rate the psychologist in the range 1 to 5", " ");
-
-   
-    
-    
+   var p = prompt("Please rate the psychologist in the range 1 to 5");
+   console.log(p);
+   this.router.navigate(['chatroom']);
   }
+
+ 
 }
 
 
